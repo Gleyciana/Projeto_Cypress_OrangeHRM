@@ -21,6 +21,15 @@ Antes de executar os testes, você precisará das seguintes ferramentas instalad
    git clone https://github.com/seuusuario/Projeto_Cypress_OrangeHRM.git
    cd Projeto_Cypress_OrangeHRM
 
-## Elaborado por
 
-Este projeto foi desenvolvido 💜 por Gleyciana Campelo 👋 &nbsp;[Meu LinkedIn](https://www.linkedin.com/in/gleyciana-campelo/)
+## 📚 Curso
+
+Este projeto faz parte do curso oferecido pela [Lumestack](https://lumestack.com/). Aproveite para se aprofundar mais em testes automatizados!
+
+## 👩‍💻 Elaborado por
+
+Este projeto foi desenvolvido com 💜 por **Gleyciana Campelo**. Sinta-se à vontade para me conectar no [LinkedIn](https://www.linkedin.com/in/gleyciana-campelo/)!
+
+## 🎉 Contribuições
+
+Contribuições são bem-vindas! Sinta-se livre para abrir um issue ou enviar um pull request para melhorar este projeto.

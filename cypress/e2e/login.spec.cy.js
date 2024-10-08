@@ -4,7 +4,7 @@ import userData from '../fixtures/users/user-data.json'
 
 describe('Orange HRM Tests', () => {
     beforeEach(() => {
-    cy.visit('/login')
+    cy.visit('/auth/login')
   
   })
 

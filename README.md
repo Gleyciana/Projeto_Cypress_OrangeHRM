@@ -1,4 +1,4 @@
-# 🌟 Testes de Login e Atualização de Usuário no OrangeHRM 🌟
+# 💻 Testes de Login e Atualização de Usuário no OrangeHRM 
 
 Bem-vindo ao projeto de testes automatizados para o sistema **OrangeHRM**! Este repositório contém um conjunto de testes que automatizam o fluxo de login e a atualização de informações de usuários. Utilizamos o **Cypress** para garantir uma experiência de usuário robusta e confiável.
 

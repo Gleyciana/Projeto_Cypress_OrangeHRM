@@ -2,8 +2,14 @@
 
 import userData from '../fixtures/users/user-data.json'
 import LoginPage from '../pages/loginPage.js'
+import DashboarPage from '../pages/dashboardPage.js'
+import MenuPage from '../pages/menuPage.js'
 
 const loginPage = new LoginPage()
+
+const dashboardPage = new DashboarPage()
+
+const menuPage = new MenuPage()
 
 describe('Orange HRM Tests', () => {
     beforeEach(() => {
@@ -12,8 +18,6 @@ describe('Orange HRM Tests', () => {
   })
 
   const selectorsList = {
-    sectionTitleTopBar: '.oxd-topbar-header-breadcrumb-module',
-    dashboardGrid: ".orangehrm-dashboard-grid",
     myInfoButton:"[href='/web/index.php/pim/viewMyDetails']",
     firstNameField: "[name='firstName']",
     middleNameField: "[name='middleName']",
@@ -36,7 +40,7 @@ describe('Orange HRM Tests', () => {
     cy.get(selectorsList.userNameField).type(userData.userSuccess.username)
     cy.get(selectorsList.passwordField).type(userData.userSuccess.password)
     cy.get(selectorsList.loginButton).click()
-    cy.location('pathname').should('equal','/web/index.php/dashboard/index')
+    dashboardPage.checkDashboarPage()
     cy.get(selectorsList.dashboardGrid)
   })
 
@@ -52,10 +56,12 @@ describe('Orange HRM Tests', () => {
   it.only('User Info Update - Success', () => {
 
     loginPage.accessLoginPage()
-    loginPage.loginWithUser(userData.userSuccess.username, userData.userSuccess.password)
-    cy.location('pathname').should('equal','/web/index.php/dashboard/index')
-    cy.get(selectorsList.dashboardGrid)
-    cy.get(selectorsList.myInfoButton).click()
+    loginPage.loginWithAnyUser(userData.userSuccess.username, userData.userSuccess.password)
+
+    dashboardPage.checkDashboarPage()
+
+    menuPage.accessMyInfo()
+
     cy.get(selectorsList.firstNameField).clear().type('Gleyciana')
     cy.get(selectorsList.middleNameField).clear().type('Campelo')
     cy.get(selectorsList.lastNameField).clear().type('Sombra')
